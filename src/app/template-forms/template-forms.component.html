@@ -1,0 +1,54 @@
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="procesar()">
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre:
+                </label>
+                <input type="text" name="nombre" class="form-control" placeholder="Porfavor ingrese un nombre" [(ngModel)]="persona.nombre" required #name="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    Ingrese su nombre
+                </div>
+
+            </div>
+
+            <div>
+                <label class="form-label">
+                    Apellido:
+                </label>
+                <input type="text" name="apellido" class="form-control" placeholder="Porfavor ingrese su apellido" [(ngModel)]="persona.apellido" required #name="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    Ingrese su apellido
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">
+                    Ciudad:
+                </label>
+                <input type="text" name="ciudad" class="form-control" placeholder="Porfavor ingrese la ciudad de origen" [(ngModel)]="persona.ciudad" required #name="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+                    Ingrese la ciudad de origen
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">
+                    Edad:
+                </label>
+                <input type="number" name="edad" class="form-control" placeholder="Porfavor ingrese su edad" [(ngModel)]="persona.edad" required #edad="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="edad.valid || edad.pristine">
+                    Ingrese su edad
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-outline-primary">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>
